@@ -1,0 +1,5 @@
+sr: 32000
+f0_method: rmvpe
+batch: 4
+steps: 20000
+fp16: true

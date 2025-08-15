@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# Data/Models
+models/
+data/
+outputs/
+
+# External
+external/
+
+# Others
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.zip
+*.tar.gz
+*.pt
+*.ckpt
+*.onnx
+*.npy
+*.npz
+*.log
+*.tmp
+
+# VSCode
+.vscode/
