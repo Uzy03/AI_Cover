@@ -1,0 +1,11 @@
+typer
+numpy
+soundfile
+librosa
+pydub
+pyloudnorm
+webrtcvad-wheels
+tqdm
+pyyaml
+requests
+faiss-cpu

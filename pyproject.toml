@@ -9,7 +9,8 @@ description = "Retrieval-based Voice Conversion CLI wrapper for Mangio-RVC-Fork"
 authors = [
     {name = "Your Name", email = "your@email.com"}
 ]
-license = {file = "LICENSE"}
+license = "MIT"
+license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -19,12 +20,15 @@ dependencies = [
     "librosa",
     "pydub",
     "pyloudnorm",
-    "webrtcvad",
+    "webrtcvad-wheels",
     "tqdm",
     "pyyaml",
     "requests",
     "faiss-cpu"
 ]
+
+[tool.setuptools.packages.find]
+include = ["rvccli*"]
 
 [project.scripts]
 rvccli = "rvccli.cli:app"

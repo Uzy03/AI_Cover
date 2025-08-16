@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+rvccli/__init__.py
+rvccli/audio_utils.py
+rvccli/cli.py
+rvccli/config.py
+rvccli/download_models.py
+rvccli/rvc_wrapper.py
+rvccli.egg-info/PKG-INFO
+rvccli.egg-info/SOURCES.txt
+rvccli.egg-info/dependency_links.txt
+rvccli.egg-info/entry_points.txt
+rvccli.egg-info/requires.txt
+rvccli.egg-info/top_level.txt

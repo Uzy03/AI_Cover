@@ -1,0 +1,2 @@
+[console_scripts]
+rvccli = rvccli.cli:app
