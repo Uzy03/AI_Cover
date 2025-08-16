@@ -1,5 +1,46 @@
-sr: 32000
-f0_method: rmvpe
-batch: 4
-steps: 20000
-fp16: true
+# RVC設定ファイル
+# プロジェクト名: rvc_project
+# モデル名: rvc_model
+
+project_name: "my_voice_clone"
+model_name: "my_voice_model"
+
+# 音声処理設定
+audio:
+  sample_rate: 32000
+  channels: 1
+  normalize_lufs: -23.0
+  trim_silence: true
+  vad_aggressiveness: 2
+  chunk_duration: 12.0
+  fade_in_ms: 100
+  fade_out_ms: 100
+
+# 学習設定
+training:
+  batch_size: 4
+  learning_rate: 0.0001
+  steps: 20000
+  save_every_n: 1000
+  fp16: true
+  index_rate: 0.75
+  f0_method: "rmvpe"
+  gpu_id: 0
+  num_workers: 4
+  pin_memory: true
+
+# 推論設定
+inference:
+  transpose: 0
+  f0_method: "rmvpe"
+  rms_mix_rate: 0.25
+  filter_radius: 3
+  resample_sr: 0
+  protect: 0.33
+  index_rate: 0.75
+
+# パス設定
+dataset_dir: "data/chunks"
+output_dir: "outputs"
+models_dir: "models"
+temp_dir: "temp"
