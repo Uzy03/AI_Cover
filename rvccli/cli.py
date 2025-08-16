@@ -10,7 +10,11 @@ def setup():
 @app.command("download-models")
 def download_models():
     """事前学習モデルのダウンロード"""
-    pass
+    import os
+    from . import download_models as dm
+    models_dir = os.path.join(os.path.dirname(__file__), '..', 'models')
+    models_dir = os.path.abspath(models_dir)
+    dm.ensure_models(models_dir)
 
 @app.command()
 def prep(in_dir: str = typer.Option(..., help="入力ディレクトリ"), out_dir: str = typer.Option(..., help="出力ディレクトリ")):
